@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@css-render/vue3-ssr": "^0.15.12",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "eslint": "^8.34.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "naive-ui": "^2.34.3",
+    "nuxt": "^3.1.2",
+    "unplugin-vue-components": "^0.23.0"
+  }
+}
