@@ -1,0 +1,19 @@
+@layer components {
+  .button {
+    @apply cursor-pointer h-8 px-4 py-[.3125rem] flex items-center justify-center gap-x-2 text-[.875rem] font-medium rounded transition-colors duration-100;
+  }
+
+  .button--primary {
+    @apply bg-emerald-500 text-white hover:bg-emerald-600
+  }
+
+  .button--secondary {
+    @apply border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white
+  }
+
+  .button--tertiary {
+    @apply bg-neutral-700 text-white hover:bg-neutral-800;
+  }
+
+  .button--danger {}
+}
