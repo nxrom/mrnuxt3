@@ -38,7 +38,11 @@ function handleResetError () {
   })
 }
 
+const errorType = computed(() => {
+  return error.value.statusCode === '404' ? 'Page Not Found' : 'Internal Server Error'
+})
+
 useHead({
-  title: `Nuxt Academy - ${error.value.statusMessage}`
+  title: `Nuxt Academy | ${error.value.statusCode} - ${errorType.value}`
 })
 </script>
