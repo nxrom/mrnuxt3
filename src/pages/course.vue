@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-1 flex-wrap my-10">
+  <div class="flex flex-1 flex-wrap my-10 xl:justify-between">
     <NuxtErrorBoundary>
       <NuxtPage />
     </NuxtErrorBoundary>
