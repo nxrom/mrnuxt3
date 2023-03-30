@@ -4,6 +4,9 @@
     :class="{
       'button--primary': color === 'primary',
       'button--secondary': color === 'secondary',
+      'button--tertiary': color === 'tertiary',
+      'button--github': color === 'github',
+      'button--full': full
     }"
     class="button"
     v-bind="$attrs"
@@ -20,10 +23,17 @@ defineProps({
   tag: {
     type: String,
     default: 'button'
+
   },
   color: {
     type: String,
-    default: 'primary'
+    default: 'primary',
+    validator: value => ['primary', 'secondary', 'tertiary', 'github'].includes(value)
+  },
+  full: {
+    type: Boolean,
+    default: false,
+    required: false
   },
   icon: {
     type: String,

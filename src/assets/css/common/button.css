@@ -15,5 +15,11 @@
     @apply bg-neutral-700 text-white hover:bg-neutral-800;
   }
 
-  .button--danger {}
+  .button--github {
+    @apply bg-black text-white;
+  }
+
+  .button span {
+    @apply whitespace-nowrap;
+  }
 }
