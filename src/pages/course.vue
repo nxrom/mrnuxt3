@@ -8,5 +8,12 @@
 </template>
 
 <script setup>
+definePageMeta({
+  middleware (to) {
+    if (/^\/course\/?$/.test(to.fullPath)) {
+      return navigateTo('/')
+    }
+  }
+})
 const { chapters } = useCourse()
 </script>

@@ -54,7 +54,7 @@ const route = useRoute()
 const course = useCourse()
 
 definePageMeta({
-  middleware: ['route-validation']
+  middleware: ['auth', 'route-validation']
 })
 
 const progress = useLocalStorage('progress', [])
