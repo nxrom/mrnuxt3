@@ -22,6 +22,7 @@
             :to="lesson.path"
             active-class="!text-emerald-500 bg-neutral-700 rounded"
             class="p-2 flex items-center gap-x-2 text-neutral-400"
+            @click="handleAddLastLesson(lesson)"
           >
             <Icon name="ic:baseline-live-tv" class="min-w-[1rem] min-h-[1rem]" />
             <span class="text-[.875rem]">
@@ -35,10 +36,21 @@
 </template>
 
 <script setup>
+import { useStorage } from '@vueuse/core'
+
 defineProps({
   chapters: {
     type: Array,
     required: true
   }
 })
+
+function handleAddLastLesson (lesson) {
+  const user = useSupabaseUser()
+  const lastLesson = useStorage('lastLesson', lesson)
+
+  if (lastLesson.value !== lesson) {
+    lastLesson.value = { ...lesson, userId: user.value?.id }
+  }
+}
 </script>
