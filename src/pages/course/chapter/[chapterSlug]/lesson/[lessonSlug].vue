@@ -19,7 +19,7 @@
         <p class="text-emerald-500 uppercase text-xs font-medium mb-1">
           {{ course.title }}
         </p>
-        <h1 class="text-lg font-bold text-white lg:text-2xl xl:text-3xl">
+        <h1 class="text-xl font-bold text-white lg:text-2xl xl:text-3xl">
           {{ lesson?.title }}
         </h1>
       </hgroup>
@@ -41,7 +41,7 @@
         :href="lesson.downloadUrl"
         tag="a"
         color="secondary"
-        icon="heroicons:arrow-down-tray"
+        icon="ph:download-simple"
       >
         Download video
       </VButton>
